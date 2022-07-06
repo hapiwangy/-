@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>表單測試檔案</title>
+    </head>
+    <body>
+        <h1>測試表單</h1>
+        <form>
+            <!--增加文字輸入提交欄位-->
+            <p>姓&nbsp;&nbsp;&nbsp;名：<input type="text" name="userName" size="40"></p>
+            <p>密&nbsp;&nbsp;&nbsp;碼：<input type="password" name="userPwd" size="40"></p>
+            <p>E-mail：<input type="text" name ="userEmail" size="40" value="username@emailserver"></p>
+      
+            <!--增加radio(通常代表的是單選題)(設定在type裡面)-->
+            <p>年&nbsp;&nbsp;&nbsp;級：
+            <input type="radio" name="userGrade" value="grade1">大學以下(不包含大一)
+            <input type="radio" name="userGrade" value="grade2">大一~大二
+            <input type="radio" name="userGrade" value="grade3">大二~大三
+            <input type="radio" name="userGrade" value="grade4">大三~大四
+            <input type="radio" name="userGrade" value="grade5">大四以上(不包含大四)
+            </p>
+            <!--設定多選題(checkbox)(name設定為陣列可以方便存取)-->
+            <p>聽過以下哪些相關的技術或名詞?
+            <input type="checkbox" name="userTech[]" value="AI">AI
+            <input type="checkbox" name="userTech[]" value="ML">ML
+            <input type="checkbox" name="userTech[]" value="ESG">ESG
+            <input type="checkbox" name="userTech[]" value="NLP">NLP
+            </p>
+            <!--建立多行文字區塊-->
+            <p>是否聽過人工智慧?簡述你對它的認識<br>
+            <textarea name = "userTable" cols="45" rows="8" placeholder="寫沒有的你是懶的填表單還是在整我呢?">2ㄏ2ㄏ
+            </textarea>
+            </p>
+            <!--建立下拉式選單-->
+            <p>喜歡那些動物
+            <select name="loveAnimal[]" size="3" multiple>
+                <option value="狗狗">狗狗</option>
+                <option value="貓貓" selected>大家都喜歡貓貓</option>
+                <option value="烏龜">烏龜</option>
+            </select>
+            </p>     
+            <!--建立隱藏欄位(非使用者輸入但可能需要一併統計的資料)-->
+            <input type="hidden" name="author" value="happy">
+            <!--html5新增的額外功能-->
+            <!--新的要求email輸入的方式(regular expression來判斷)，若輸入奇怪的東西會要求重新輸入-->
+            <!--使用multiple來讓使用者可以用","隔開一次輸入多個email-->
+            <!--使用required來讓規定必要輸入-->
+            <input type="email" pattern=".+@gmail.com" placeholder="尾巴要是gmail.com的喔" size="30">                  
+            <!--限制輸入url -->
+            <input type = "url" placeholder="限定url">
+            <br>
+            <!-- 增加search欄位 -->
+            <!-- 基本上和text欄位一樣，只是有的可能外觀會有差異 -->
+            <p>比較text、search</p>
+            <input type="text" placeholder="這是text">
+            <input type="search" placeholder="這是search">
+            <br>
+            <!-- 設定數字遞減區間，數字設定跟py的for很像-->
+            <!-- 上面是用按的，下面是用拉的 -->
+            <input type="number" min="0" max="10" step="2">
+            <input type="range" min="0" max="10" step="2">
+            <br>
+            <!-- 設定輸入的東西是顏色 -->
+            <input type="color">
+            <!-- 設定輸入電話號碼，並用pattern來驗證是否有效 -->
+            <input type="tel" pattern="[0-9]{4}-[0-9]{6}" placeholder="xxxx-xxxxxx">
+            <br>
+            <!-- 輸入時間相關訊息，以下都可以搭配min、max、step來設定區間 -->
+            <input type="date">
+            <input type="time">
+            <input type="month">
+            <input type="week">
+            <input type="datetime-local">
+            <br>
+            <!--增加提交和重製按鈕-->
+            <input type="submit" value="提交">
+            <input type="reset" value="重製">        
+        </form>
+    </body>
+</html>
