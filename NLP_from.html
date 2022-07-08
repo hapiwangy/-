@@ -11,7 +11,17 @@
             <p>姓&nbsp;&nbsp;&nbsp;名：<input type="text" name="userName" size="40"></p>
             <p>密&nbsp;&nbsp;&nbsp;碼：<input type="password" name="userPwd" size="40"></p>
             <p>E-mail：<input type="text" name ="userEmail" size="40" value="username@emailserver"></p>
-      
+            <br>
+            <!-- 另一種增加標籤的方式-->
+            <label for="UN">姓 名：</label>
+            <input type="text" size="20" id="UN">
+            <br>
+            <label for="UP">密 碼：</label>
+            <input type="password" size="20" id="UP">
+            <br>
+            <label for="UE">電 郵：</label>
+            <input type="text" size="20" id="UE">
+            <br>
             <!--增加radio(通常代表的是單選題)(設定在type裡面)-->
             <p>年&nbsp;&nbsp;&nbsp;級：
             <input type="radio" name="userGrade" value="grade1">大學以下(不包含大一)
@@ -39,9 +49,54 @@
                 <option value="貓貓" selected>大家都喜歡貓貓</option>
                 <option value="烏龜">烏龜</option>
             </select>
-            </p>     
+            </p>
+            <!--option共同建立的標籤-->
+            <label for="lovedAnimal">你喜歡那些動物呢?</label>
+            <select name="lovedAniaml[]" size="5">
+                <optgroup label="LoveAniaml">
+                    <option value="狗">狗</option>
+                    <option value="貓">貓</option>
+                    <option value="兔">兔</option>
+                </optgroup>
+                <optgroup label="LoveAnimal1">
+                    <option value="貓熊">貓熊</option>
+                    <option value="貓咪">貓咪</option>
+                    <option value="兔兔">兔兔</option>
+                </optgroup>
+            </select>     
             <!--建立隱藏欄位(非使用者輸入但可能需要一併統計的資料)-->
             <input type="hidden" name="author" value="happy">
+            <br>
+            <fieldset>
+                <legend>偷你資料囉</legend>
+                <p>姓&nbsp;&nbsp;&nbsp;名：<input type="text" name="userName" size="40"></p>
+                <p>密&nbsp;&nbsp;&nbsp;碼：<input type="password" name="userPwd" size="40"></p>
+                <p>E-mail：<input type="text" name ="userEmail" size="40" value="username@emailserver"></p>
+                <br>
+                <p>年&nbsp;&nbsp;&nbsp;級：
+                    <input type="radio" name="userGrade" value="grade1">大學以下(不包含大一)
+                    <input type="radio" name="userGrade" value="grade2">大一~大二
+                    <input type="radio" name="userGrade" value="grade3">大二~大三
+                    <input type="radio" name="userGrade" value="grade4">大三~大四
+                    <input type="radio" name="userGrade" value="grade5">大四以上(不包含大四)
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>哈哈哈好爽喔</legend>
+                <p>沒料ㄌQAQ</p>
+                <br>
+                <p>是否聽過人工智慧?簡述你對它的認識<br>
+                    <textarea name = "userTable" cols="45" rows="8" placeholder="寫沒有的你是懶的填表單還是在整我呢?">OWOAOWO
+                    </textarea>
+                    </p>
+                    <!--建立下拉式選單-->
+                    <p>喜歡那些動物
+                    <select name="loveAnimal[]" size="3" multiple>
+                        <option value="狗狗">狗狗</option>
+                        <option value="貓貓" selected>大家都喜歡貓貓</option>
+                        <option value="烏龜">烏龜</option>
+                    </select>
+            </fieldset>
             <!--html5新增的額外功能-->
             <!--新的要求email輸入的方式(regular expression來判斷)，若輸入奇怪的東西會要求重新輸入-->
             <!--使用multiple來讓使用者可以用","隔開一次輸入多個email-->
@@ -73,6 +128,9 @@
             <input type="week">
             <input type="datetime-local">
             <br>
+            <!-- 不同種增加按鈕的方式-->
+            <button type="submit" >b提交</button>
+            <button type="reset" >b重製</button>
             <!--增加提交和重製按鈕-->
             <input type="submit" value="提交">
             <input type="reset" value="重製">        
