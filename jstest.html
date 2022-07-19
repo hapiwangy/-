@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS測試檔案</title>
+        <script>
+            function openNewWindow(){
+                mywin = window.open("new.html", "新的視窗", "height=200, width=400");
+            }
+            function closeNewWindow(){
+                if (mywin) mywin.close();
+            }
+            function closeCurrentWindow(){
+                window.close();
+            }
+        </script>
+    </head>
+    <body>
+        <a href="javascript: openNewWindow();">開新視窗</a>
+        <a href="javascript: closeNewWinodw();">新視窗關閉</a>
+        <a href="javascript: closeCurrentWindow();">關閉目前視窗</a>
+    </body>
+</html>

@@ -5,6 +5,16 @@
         <title>CSS測試檔案</title>
         <style>
             h1 {color:cadetblue;}  
+            h4::first-line {color:red;}
+            h4::after {content:"(加在後面喔)";color:blue;}
+        </style>
+        <style>
+            a:link {color:brown;}
+            a:visited {color:aqua;}
+        </style>
+        <style>
+            h6:hover{color:blue;background:gray;}
+            
         </style>
         <style>
             @import url("test_cs.css");    
@@ -15,6 +25,9 @@
         <h1>在head裡面設定的CSS</h1>
         <h2>透過import來做連結</h2>
         <h3>透過link來做連結</h3>
+        <h4>虛擬元素</h4>
+        <h5><a href="https:\\google.com">超連結CSS設定</a></h5>
+        <h6>經過測試</h6>
         <p style="color:blue;">在html標籤裡面設定</p>
     </body>
 </html>
